@@ -54,7 +54,7 @@ Here is an example that we recorded for test the jacobian.
 
 Singularity analyses were based on Jacobian analysis in specific end-effector position and orientation, using the formula for manipulability index.
 
-![singularity map](singularity_map.png)
+![singularity map](images/singularity_map.png)
 
 Map shows that singularities are observed at the edges of the working area of the robot.
 
