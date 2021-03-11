@@ -1,4 +1,4 @@
- function [ active_q, passive_q ] = Ik_leg(T, L)  
+ function [ active_q, passive_q, success ] = Ik_leg(T, L)  
     y1 = -L.base_radius; % координата для начала плеча
     y0 = T(2) - L.end_platform_radius; % координата крепления мобильной платформы
 
@@ -16,8 +16,8 @@
     % находим дискриминант квадратного уравнения
     d = -(a+b*y1)*(a+b*y1)+rf*(b*b*rf+rf);
     if (d < 0) 
-        theta = 0;
-        return; % несуществующая точка
+        success = false;
+        error("no point"); % несуществующая точка
     end
 
     yj = (y1 - a*b - sqrt(d))/(b*b + 1); % выбираем внешнюю точку
@@ -39,5 +39,6 @@
 
     active_q = theta1;   
     passive_q = [theta2; theta3]; 
+    success = true;
 
 end
