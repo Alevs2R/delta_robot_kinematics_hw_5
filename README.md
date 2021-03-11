@@ -40,6 +40,7 @@ All derivations are described in [this article](https://habr.com/ru/post/390281/
 ## Jacobian
 
 Derivation of the jacobian is built on this equations:
+
 ![forward equations with passive joints known](images/forward_eq_2.jpg)
 
 Then derivatives of equations with respect to x, y and z are found. Then we multiply equations with trigonometrical functions, add them together, which results in some terms elimination. Finally we obtained the following equation:
