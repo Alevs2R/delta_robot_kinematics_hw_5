@@ -35,6 +35,8 @@ The main task in forward kinematics is to find the position of the mobile platfo
 
 ![forward equations](images/forward_eq.png)
 
+![forward equations](images/3_spheres.gif)
+
 All derivations are described in [this article](https://habr.com/ru/post/390281/).
 
 ## Jacobian
